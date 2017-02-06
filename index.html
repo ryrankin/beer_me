@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Etsy</title>
+  <link rel="stylesheet" href="main2.css">
+  <script src="https://use.typekit.net/uow3yrz.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="api.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+<body>
+  <div class="etsy">
+    <div class="opening" id="opening">
+      Search Etsy's Products
+    <form class="etsySearch" id="etsySearch">
+      <input class="text" id="etsyQuery" placeholder="Search for Etsy Products">
+      <input type="submit" id="submit" value="Submit">
+    </form>
+    </div>
+  </div>
+  <div class="resultsText">Search Results for "<span class="search"></span> "</div>
+  <div id="searchResults">
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </div>
+  <div id="loading" class="loadingGif2">
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"/>
+  </div>
+
+  <div class="arrow" id="arrow">
+    <a href id="top">
+      <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/38-200.png">
+    </a>
+  </div>
+
+
+</html>
