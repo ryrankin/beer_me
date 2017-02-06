@@ -37,6 +37,15 @@ body {
 	color: white;
 }
 
+.button {
+	margin-top: 20px;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+	margin-left: 0px;
+	padding: 0px;
+}
+
 form {
 	padding-top: 20px;
 }
@@ -51,8 +60,14 @@ ul {
 li {
 	display: inline-block;
 	list-style-type: none;
+	padding: 25px;
 	width: 25%;
 	vertical-align: baseline;
+}
+
+img {
+	width: 80%;
+	padding-bottom: 20px;
 }
 
 .resultText {
