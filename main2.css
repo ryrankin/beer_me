@@ -11,3 +11,68 @@ body {
 #searchResults {
 	text-align: center;
 }
+
+#etsyQuery {
+	height: 30px;
+	width: 300px;
+	font-size: 16px;
+	padding: 5px;
+}
+
+form {
+	padding: 100px;
+	font-size: 60px;
+}
+
+ul {
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	list-style-type: none;
+	width: 25%;
+	vertical-align: baseline;
+}
+
+.resultText {
+	padding: 30px;
+	font-size: 30px;
+}
+
+.search {
+	font-style: italic;
+	font-size: 45px;
+	font-family: "sofia-pro",sans-serif;
+
+}
+
+@media screen and (max-width: 800px) {
+	li {
+		width: 50%;
+	}
+	.opening {
+		font-size: 35px;;
+		padding: 20px;
+	}
+	#etsyQuery {
+		height: 50px;
+		margin-bottom: 20px;
+	}
+	#submit {
+		width: 200px;
+		height: 65px;
+	}
+	img {
+		width: 100%;
+	}
+	#searchResults {
+		font-size: 20px;
+	}
+	#loading {
+		margin-top: 20px;
+	}
+}
