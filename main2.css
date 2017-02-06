@@ -32,9 +32,6 @@ body {
 	display: inline-block;
 	font-size: 16px;
 	margin-left: 20px;
-	-webkit-appearance: none;
-	border: none;
-	color: white;
 }
 
 .button {
