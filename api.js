@@ -3,7 +3,7 @@ var SEARCHTERM = '';
 var RUNCALL = true;
 
 //get data from etsy api and ajax call
-var getDataFromEtsy = function(searchTerm, offset) {
+var getDataFromEtsy = function(searchTerm, offset){
 	var listingRequest = {
 		api_key: '9n8h7006j4x35jmb912dy08k',
 		method : 'GET', 
@@ -45,7 +45,7 @@ function showResults(results){
 }
 
 
-$(document).ready(function() {
+$(document).ready(function(){
 	$('.resultsText').hide();
 	$('#loading').hide();
 	//submit your search
@@ -56,7 +56,7 @@ $(document).ready(function() {
 		$('#searchResults').html('');
 		SEARCHTERM = $('#etsyQuery').val();
 		$('.search').text(SEARCHTERM);
-		OFFSET = 50;
+		OFFSET = 30;
 		getDataFromEtsy(SEARCHTERM);
 		RUNCALL = true;
 	});
