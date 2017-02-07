@@ -1,4 +1,4 @@
-var OFFSET = 30;
+var OFFSET = 20;
 var SEARCHTERM = '';
 var RUNCALL = true;
 
@@ -10,7 +10,7 @@ var getDataFromEtsy = function(searchTerm, offset){
 		keywords : searchTerm,
 		fields : ['listing_id', 'price', 'title', 'listing_image_id', 'url_570xN'], 
 		includes: 'MainImage',
-		limit: 50,
+		limit: 20,
 		offset: offset ? offset : 0
 	};
 	$.ajax({
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		$('#searchResults').html('');
 		SEARCHTERM = $('#etsyQuery').val();
 		$('.search').text(SEARCHTERM);
-		OFFSET = 30;
+		OFFSET = 20;
 		getDataFromEtsy(SEARCHTERM);
 		RUNCALL = true;
 	});
@@ -68,7 +68,7 @@ $(document).ready(function(){
 			$('#loading').show();
 			console.log(RUNCALL);
 			getDataFromEtsy(SEARCHTERM, OFFSET);
-			OFFSET += 30;
+			OFFSET += 20;
 		} 	
 	});
 
@@ -79,6 +79,11 @@ $(document).ready(function(){
 		} else {
 			$('#arrow').fadeOut();
 		};
+	});
+
+	$('#top').click(function (e){
+		e.preventDefault();
+		$("html, body").animate({scrollTop: 0}, 200);
 	});
 
 });
