@@ -2,9 +2,10 @@ var OFFSET = 20;
 var SEARCHTERM = '';
 var RUNCALL = true;
 
+
 //get data from etsy api and ajax call
 var getDataFromEtsy = function(searchTerm, offset){
-	var listingRequest = {
+	var query = {
 		api_key: '9n8h7006j4x35jmb912dy08k',
 		method : 'GET', 
 		keywords : searchTerm,
@@ -15,15 +16,17 @@ var getDataFromEtsy = function(searchTerm, offset){
 	};
 	$.ajax({
 		url : 'https://openapi.etsy.com/v2/listings/active.js',
-		data : listingRequest,
+		data : query,
 		success : function(data, e){
-			showResults(data);
+			displayResults(data);
 		},
 		dataType : 'jsonp'
 	});
 }
+
+
 //append search results
-function showResults(results){
+function displayResults(results){
 	var html = "";
 	if(results.results.length === 0){
 		RUNCALL = false;
@@ -61,9 +64,9 @@ $(document).ready(function(){
 		RUNCALL = true;
 	});
 
-	// each time the user scrolls
+	// when the user scrolls
 	$(window).scroll(function() {
-		// End of the document reached?
+		// End of the document reached
 		if(Math.floor($(window).scrollTop()) + $(window).height() > $(document).height() - 5 && SEARCHTERM.length && RUNCALL) {
 			$('#loading').show();
 			console.log(RUNCALL);
